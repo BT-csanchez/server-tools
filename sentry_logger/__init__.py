@@ -54,7 +54,7 @@ try:
         handler = OdooSentryHandler(client, level=level)
         root_logger.addHandler(handler)
     else:
-        root_logger.warn(u"Sentry DSN not defined in config file")
+        root_logger.info(u"Sentry DSN not defined in config file")
         client = None
 
     # Inject sentry_activated to session to display error message or not
